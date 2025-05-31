@@ -5,9 +5,9 @@ const app = express()
 const router = express.Router()
 
 router.get('/hello', (req, res) => {
-  res.send('Hello, world!');
+  res.json({ message: 'Hello, world!' });
 });
 
 app.use('/.netlify/functions/api', router);
 
-module.exports.handler = serverless(app);
+export const handler = serverless(app);
