@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      express:
+        specifier: ^5.1.0
+        version: 5.1.0
+      serverless-http:
+        specifier: ^3.2.0
+        version: 3.2.0
     devDependencies:
       '@netlify/functions':
         specifier: ^4.0.0
@@ -14,12 +21,6 @@ importers:
       '@types/express':
         specifier: ^5.0.2
         version: 5.0.2
-      express:
-        specifier: ^5.1.0
-        version: 5.1.0
-      serverless-http:
-        specifier: ^3.2.0
-        version: 3.2.0
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
