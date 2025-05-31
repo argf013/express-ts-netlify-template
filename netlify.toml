@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  functions = "netlify/functions"
+  functions = "/dist/netlify/functions"
 
 [functions]
   external_node_modules = ["express"]
