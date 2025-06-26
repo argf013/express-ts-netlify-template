@@ -1,15 +1,23 @@
 {
   "name": "netlify-express-ts",
   "version": "1.0.0",
-  "description": "",
+  "description": "Express TypeScript template for Netlify Functions",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "netlify dev"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "express",
+    "typescript",
+    "netlify",
+    "serverless",
+    "functions",
+    "api"
+  ],
+  "author": "argf013",
+  "license": "MIT",
   "devDependencies": {
     "@netlify/functions": "^4.0.0",
     "@types/express": "^5.0.2",
