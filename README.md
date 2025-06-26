@@ -66,6 +66,36 @@ Example response:
 }
 ```
 
+## Redirects and HTTP Methods
+
+This template uses Netlify redirects to simplify API URLs. However, there are important limitations:
+
+### GET Requests
+
+✅ **Works with shortened URL:**
+
+```bash
+# Both work for GET requests
+curl https://yoursite.netlify.app/api/hello
+curl https://yoursite.netlify.app/.netlify/functions/api/hello
+```
+
+### Other HTTP Methods (POST, PUT, DELETE, etc.)
+
+❌ **Requires full URL:**
+
+```bash
+# This WON'T work for non-GET methods
+curl -X POST https://yoursite.netlify.app/api/endpoint
+
+# This WILL work
+curl -X POST https://yoursite.netlify.app/.netlify/functions/api/endpoint
+```
+
+### Why This Happens
+
+Netlify redirects only apply to GET requests. For other HTTP methods (POST, PUT, DELETE, PATCH), you must use the full `/.netlify/functions/api/` path.
+
 ## Project Structure
 
 ```
@@ -138,27 +168,6 @@ Key settings in `netlify.toml`:
 - Functions directory: `netlify/functions`
 - External modules: `express`
 - Bundler: `esbuild`
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Build errors**: Ensure you're using NPM (not pnpm or yarn)
-2. **Function timeout**: Check Netlify function execution limits
-3. **Module not found**: Run `npm install` to ensure all dependencies are installed
-
-### Package Manager Issues
-
-If you encounter errors, ensure you're using NPM:
-
-```bash
-# Remove other lock files if they exist
-rm -f pnpm-lock.yaml yarn.lock
-
-# Clean install with NPM
-rm -rf node_modules
-npm install
-```
 
 ## License
 
