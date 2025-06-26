@@ -4,11 +4,11 @@ A serverless Express.js application built with TypeScript, designed to run on Ne
 
 ## Features
 
-- 🚀 Express.js with TypeScript
-- 🌐 Serverless deployment on Netlify
-- 🔧 Hot reload development with Netlify CLI
-- 📦 Pre-configured build pipeline
-- 🎯 API routing with Express Router
+- Express.js with TypeScript
+- Serverless deployment on Netlify
+- Hot reload development with Netlify CLI
+- Pre-configured build pipeline
+- API routing with Express Router
 
 ## Prerequisites
 
